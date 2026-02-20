@@ -3,6 +3,9 @@ import { getAuth } from "firebase/auth";
 import { getDatabase } from "firebase/database";
 import Constants from "expo-constants";
 
+
+
+
 const {
   firebaseApiKey,
   firebaseAuthDomain,
@@ -27,3 +30,5 @@ const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
 
 export const auth = getAuth(app);
 export const db = getDatabase(app);
+
+console.log("✅ databaseURL =", firebaseConfig.databaseURL);
